@@ -1,38 +1,191 @@
-.App {
+html {
+  background: #c0b4b42e;
+  font-size: 62.5%;
+  font-family: "Fira Code", monospace;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "fira code";
+}
+.HomeBody {
+  text-align: center;
+  background: coral;
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.cardContainer {
+  background: white;
+  text-align: center;
+  padding: 2rem 0;
+  width: 100%;
+  max-width: 425px;
+  margin: 2rem auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #80808045;
+}
+.searchBox input {
+  width: 90%;
+  border: none;
+  padding: 5px 10px;
+}
+.searchBox input:focus {
+  border: none;
+  outline: none;
+}
+
+.searchBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid aquamarine;
+  margin: 0 2rem;
+}
+.searchBox button {
+  border: none;
+  padding: 5px;
+  font-size: 15px;
+  background: aqua;
+  color: black;
+  font-weight: bold;
+}
+.cardBody h3 {
+  font-size: 2rem;
+  display: inline-block;
+  padding: 5px 0;
+  margin-bottom: 10px;
+  margin-left: 2rem;
+}
+.cardBody {
+  text-align: left;
+  padding: 5px 0;
+}
+.routes span {
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 35px;
+  border: 2px solid hotpink;
+  cursor: pointer;
+}
+.routes span:hover {
+  background-color: hotpink;
+  color: white;
+}
+.cardText h4 {
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.cardTextBody {
+  border-bottom: 1px solid grey;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 0 5px rgba(128, 128, 128, 0.274);
+}
+.cardTextBody button {
+  background-color: rgb(250, 0, 0);
+  color: white;
+  margin: 10px 5px 0 0;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.cardText {
+  padding: 3rem 0;
+  border-top: 2px solid gray;
+  margin-top: 2rem;
+}
+
+.active {
+  background-color: hotpink !important;
+  color: white !important;
+}
+button {
+  cursor: pointer;
+}
+.cardAddMoreTextBody button {
+  margin-top: 10px;
+  border: 2px solid aquamarine;
+  background: white;
+  color: red;
+  font-weight: bold;
+  font-size: 1.7rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.updateButtonSec {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+}
+
+.FilterByID {
+  margin: 25px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cardAddMoreTextBody button:hover {
+  background-color: aquamarine;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cardAddMoreTextBody input {
+  padding: 10px 20px;
+  width: 100%;
+  margin: 5px 0;
+  border: 2px solid aquamarine;
+  border-radius: 50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.cardAddMoreTextBody {
+  text-align: center;
+}
+.cardTextBody p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: red;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 2;
   color: white;
+  border-radius: 50%;
+}
+.updateDataBody input {
+  width: 100%;
+  border: 2px solid aquamarine;
+  padding: 10px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.updateDataBody h4 {
+  margin-bottom: 10px;
+}
+.updateDataBody {
+  text-align: center;
+}
+.updateDataBody button {
+  margin: 20px 0;
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.cardTextBody:nth-child(even) {
+  background: lightsteelblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardTextBody:nth-child(odd) {
+  background: antiquewhite;
 }

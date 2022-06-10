@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import { memo, useEffect } from 'react';
+import { useDispatch } from "react-redux";
 import './App.css';
+import Mainhome from './components/Mainhome';
+import { getApiAction } from './redux/actions/apiActions';
 
 function App() {
+  const dispatch = useDispatch();
+  const callApi = () =>{
+    return async (dispatch) => 
+    {
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+      const data = await res.json();
+      dispatch(getApiAction(data))
+    }
+  }
+
+
+
+  useEffect(()=>{
+    dispatch(callApi())
+  },[])
+ console.log("object")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Mainhome />
+    </>
   );
 }
 
-export default App;
+export default memo(App);

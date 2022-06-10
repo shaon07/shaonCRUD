@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+The website is live now at : https://shaoncrud.netlify.app
+
+Visit My Portfolio at : https://shaontechnical.blogspot.com
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
